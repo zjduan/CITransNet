@@ -1,15 +1,17 @@
 ## Introduction
 
-This is the pytorch implementation of our paper: A Context-Integrated Transformer-Based Neural Network for Auction Design.  
+This is the Pytorch implementation of our paper: *A Context-Integrated Transformer-Based Neural Network for Auction Design* ([https://arxiv.org/abs/2201.12489]()) in *ICML 2022*.
 
 
 ## Requirements
 
-````
-Python>=3.6
-Pytorch
-Tqdm
-````
+
+* Python >= 3.6
+* Pytorch 1.10.0
+* Argparse
+* Logging
+* Tqdm
+* Scipy
 
 ## Usage
 
@@ -18,37 +20,47 @@ Tqdm
 ```bash
 cd data_gen
 # For Setting G,H,I
-python3 data_gen_continous.py
+python data_gen_continous.py
 
 # For Setting D,E,F
-python3 data_gen_discrete.py
+python data_gen_discrete.py
 ```
-
-We have already include the data for Setting G in `data_multi/10d_2x5.zip`.
 
 ### Train CITransNet
 
 ```bash
 cd CITransNet
 # For Setting G
-python3 main_2x5_c.py
+python main_2x5_c.py
 
 # For Setting H
-python3 main_3x10_c.py
+python main_3x10_c.py
 
 # For Setting I
-python3 main_5x10_c.py
+python main_5x10_c.py
 
 # For Setting D
-python3 main_2x5_d.py
+python main_2x5_d.py
 
 # For Setting E
-python3 main_3x10_d.py
+python main_3x10_d.py
 
-# For Setting F
-python3 main_5x10_d.py
+# For Setting F, it is recommended to train it with 2 GPUs.
+CUDA_VISIBLE_DEVICES=0,1 python main_5x10_d.py --data_parallel True
 ```
+
+## Citation
+If you find our code useful in your research, please cite the original paper.
+```
+@article{duan2022context,
+	title={A Context-Integrated Transformer-Based Neural Network for Auction Design},  
+	author={Duan, Zhijian and Tang, Jingwu and Yin, Yutong and Feng, Zhe and Yan, Xiang and Zaheer, Manzil and Deng, Xiaotie},  
+	journal={arXiv preprint arXiv:2201.12489},  
+	year={2022}  
+}
+```
+
 
 ## Acknowledgement
 
-Our code is built upon the implementation of https://arxiv.org/abs/2003.01497
+Our code is built upon the implementation of [https://arxiv.org/abs/2003.01497]()

@@ -51,9 +51,6 @@ class Trainer(BaseTrainer):
             self.train_data = load_data(self.train_dir, self.train_size)
             self.train_size = len(self.train_data[0])
 
-            # self.misreports = self.train_data[0].copy()
-            # self.misreports = np.expand_dims(self.misreports, axis=1)
-            # self.misreports = np.random.rand(self.train_size, 1, args.n_bidder, args.n_item)
             self.misreports = np.random.uniform(args.v_min, args.v_max,
                                                 size=(self.train_size, args.n_misreport_init_train,
                                                       args.n_bidder, args.n_item))
@@ -157,7 +154,6 @@ class Trainer(BaseTrainer):
         else:
             data_size = self.test_size
             data = self.test_data
-        # misreports = np.random.rand(data_size, args.n_misreport_init, args.n_bidder, args.n_item)
         misreports = np.random.uniform(args.v_min, args.v_max, size=(data_size, args.n_misreport_init, args.n_bidder, args.n_item))
         indices = np.arange(data_size)
         profit_sum = 0.0

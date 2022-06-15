@@ -7,7 +7,6 @@ import collections
 import torch.optim as optim
 from clippedAdam        import Adam
 import matplotlib.pyplot as plt
-from IPython import embed
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 

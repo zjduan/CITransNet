@@ -2,7 +2,6 @@ import os
 import numpy as np
 from scipy.stats import truncnorm
 from tqdm import tqdm
-from IPython import embed
 
 def gen(n, m, n_type=10, m_type=10, phase='train', n_data=200000):
     dir = f'../data_multi/{n_type}t{m_type}t_{n}x{m}/{phase}_{n_data}'
