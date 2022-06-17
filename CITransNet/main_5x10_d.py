@@ -36,8 +36,8 @@ if __name__ == '__main__':
 
     parser.add_argument('--train_size', type=int, default=None)
     parser.add_argument('--batch_size', type=int, default=500)
-    parser.add_argument('--n_epoch', type=int, default=80)
-    parser.add_argument('--learning_rate', type=float, default=5e-4)
+    parser.add_argument('--n_epoch', type=int, default=60)
+    parser.add_argument('--learning_rate', type=float, default=1e-3)
 
     parser.add_argument('--test_size', type=float, default=None)
     parser.add_argument('--batch_test', type=int, default=30)
