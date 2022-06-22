@@ -1,6 +1,6 @@
 ## Introduction
 
-This is the Pytorch implementation of our paper: *A Context-Integrated Transformer-Based Neural Network for Auction Design* ([https://arxiv.org/abs/2201.12489]()) in *ICML 2022*.
+This is the Pytorch implementation of our paper: *A Context-Integrated Transformer-Based Neural Network for Auction Design* (<https://arxiv.org/abs/2201.12489>) in *ICML 2022*.
 
 
 ## Requirements
@@ -49,18 +49,6 @@ python main_3x10_d.py
 CUDA_VISIBLE_DEVICES=0,1 python main_5x10_d.py --data_parallel True
 ```
 
-## Citation
-If you find our code useful in your research, please cite the original paper.
-```
-@article{duan2022context,
-	title={A Context-Integrated Transformer-Based Neural Network for Auction Design},  
-	author={Duan, Zhijian and Tang, Jingwu and Yin, Yutong and Feng, Zhe and Yan, Xiang and Zaheer, Manzil and Deng, Xiaotie},  
-	journal={arXiv preprint arXiv:2201.12489},  
-	year={2022}  
-}
-```
-
-
 ## Acknowledgement
 
-Our code is built upon the implementation of [https://arxiv.org/abs/2003.01497]()
+Our code is built upon the implementation of <https://arxiv.org/abs/2003.01497>.
