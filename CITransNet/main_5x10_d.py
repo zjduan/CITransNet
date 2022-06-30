@@ -1,18 +1,7 @@
-import os
-import sys
-import numpy as np
-from statistics import mean
-import random
 import logging
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
-from tqdm import tqdm
-import json
-import shutil
-from trainer import Trainer
 from time import time
 import datetime
+from trainer import Trainer
 
 if __name__ == '__main__':
     from base import parser, str2bool

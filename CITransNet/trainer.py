@@ -14,7 +14,7 @@ from time import time
 
 from base import BaseTrainer
 from network import TransformerMechanism
-from utilities          import misreportOptimization
+from utilities import misreportOptimization
 def loss_function(mechanism,lamb,rho,batch,trueValuations,misreports):
     from utilities import loss
     return loss(mechanism,lamb,rho,batch,trueValuations,misreports)

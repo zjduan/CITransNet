@@ -1,11 +1,6 @@
-import math
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-import numpy as np
-import collections
-import torch.optim as optim
-
 
 class Transformer2DNet(nn.Module):
     def __init__(self, d_input, d_output, n_layer, n_head, d_hidden):
